@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart'; // Tambahkan ini
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
@@ -10,11 +11,9 @@ class ForgotPasswordPage extends StatefulWidget {
 class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   final _formKey = GlobalKey<FormState>();
 
-  // variabel sementara untuk simpan data
   String email = "";
   String newPassword = "";
 
-  // controller untuk ambil input
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -25,14 +24,12 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
         newPassword = passwordController.text;
       });
 
-      // tampilkan notifikasi
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Password berhasil direset")),
       );
 
-      // delay sebentar lalu kembali ke login
       Future.delayed(const Duration(seconds: 2), () {
-        Navigator.pop(context); // balik ke halaman login
+        Navigator.pop(context);
       });
     }
   }
@@ -46,9 +43,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // ICON HEADER
-              Image.asset(
-                "assets/images/icon.png",
+              // ICON HEADER SVG
+              SvgPicture.asset(
+                'assets/icons/shopping_bag.svg',
                 width: 80,
                 height: 80,
               ),
@@ -74,7 +71,6 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 key: _formKey,
                 child: Column(
                   children: [
-                    // EMAIL FIELD
                     TextFormField(
                       controller: emailController,
                       decoration: InputDecoration(
@@ -96,7 +92,6 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     ),
                     const SizedBox(height: 20),
 
-                    // NEW PASSWORD FIELD
                     TextFormField(
                       controller: passwordController,
                       obscureText: true,
@@ -119,7 +114,6 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                     ),
                     const SizedBox(height: 30),
 
-                    // RESET BUTTON
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
