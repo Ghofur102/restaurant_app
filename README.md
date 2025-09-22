@@ -11,6 +11,8 @@ Aplikasi ini dirancang sebagai prototipe UI untuk aplikasi pemesanan makanan. Fo
 1.  **Halaman Registrasi**: Pengguna dapat mendaftarkan akun baru.
 2.  **Halaman Login**: Pengguna yang sudah terdaftar dapat masuk ke aplikasi.
 3.  **Halaman Lupa Password**: Fitur untuk mereset kata sandi pengguna.
+4.  **Halaman Menu Makanan**: Menampilkan daftar menu yang bisa dipesan.
+5.  **Halaman Sukses**: Halaman konfirmasi setelah sebuah aksi berhasil.
 
 ## Tampilan Aplikasi (Hasil Praktikum)
 
@@ -34,36 +36,22 @@ Halaman ini digunakan ketika pengguna lupa dengan kata sandinya. Pengguna harus 
 
 !Tampilan Halaman Lupa Password
 
+### 4. Halaman Menu Makanan (`menu_makanan.dart`)
+
+Setelah pengguna berhasil login, mereka akan diarahkan ke halaman ini. Halaman ini menampilkan daftar menu makanan beserta harganya. Pengguna dapat menambah atau mengurangi jumlah pesanan untuk setiap item dan melihat totalnya. Terdapat juga tombol untuk menyelesaikan transaksi atau mereset semua pesanan.
+
+!Tampilan Halaman Menu Makanan
+
 ## Struktur Kode
 
 -   `main.dart`: File utama yang menjalankan aplikasi dan mengatur halaman awal ke `RegisterPage`.
 -   `register.dart`: Berisi UI untuk halaman pendaftaran.
 -   `login.dart`: Berisi UI untuk halaman login.
 -   `lupa_password.dart`: Berisi UI dan logika dasar untuk halaman reset password.
+-   `menu_makanan.dart`: Berisi UI dan state management sederhana untuk halaman menu.
+-   `transaksi.dart` & `transaksi_berhasil.dart`: Berisi UI untuk halaman konfirmasi sukses.
 -   `pubspec.yaml`: Mengelola dependensi proyek, seperti `flutter_svg` untuk menampilkan ikon.
 
 ## Dependensi yang Digunakan
 
 -   `flutter_svg`: Digunakan untuk merender gambar dengan format `.svg`, seperti ikon tas belanja yang ada di setiap header halaman.
-
-## Cara Menjalankan Proyek
-
-1.  Pastikan Anda telah menginstal Flutter SDK di komputer Anda.
-2.  *Clone* repositori ini ke direktori lokal Anda.
-    ```bash
-    git clone <URL_REPOSITORI_ANDA>
-    ```
-3.  Buka proyek di terminal atau IDE Anda (seperti VS Code atau Android Studio).
-4.  Jalankan perintah berikut untuk mengunduh semua dependensi yang diperlukan:
-    ```bash
-    flutter pub get
-    ```
-5.  Pastikan folder `assets/praktikum` dengan semua gambar screenshot sudah ada di dalam proyek.
-6.  Jalankan aplikasi pada emulator atau perangkat fisik dengan perintah:
-    ```bash
-    flutter run
-    ```
-
----
-
-Untuk bantuan lebih lanjut mengenai pengembangan Flutter, Anda dapat melihat dokumentasi online Flutter.
