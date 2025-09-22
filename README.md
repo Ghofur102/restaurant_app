@@ -22,25 +22,25 @@ Berikut adalah tangkapan layar dari setiap halaman utama yang telah dibuat dalam
 
 Halaman ini adalah halaman awal aplikasi. Pengguna diminta untuk mengisi data diri seperti nama lengkap, username, email, dan password untuk membuat akun baru. Desainnya menggunakan `UnderlineInputBorder` untuk field input yang simpel dan tombol registrasi dengan sudut yang membulat.
 
-!Tampilan Halaman Registrasi
+![Create Akun](assets/praktikum/create%20akun.png)
 
 ### 2. Halaman Login (`login.dart`)
 
 Halaman ini ditujukan bagi pengguna yang sudah memiliki akun. Terdapat field untuk username dan password. Terdapat dua tombol, "Login" dan "Register", serta tautan "Lost Password?" untuk navigasi ke halaman pemulihan akun.
 
-!Tampilan Halaman Login
+![Login](assets/praktikum/login.png)
 
 ### 3. Halaman Lupa Password (`lupa_password.dart`)
 
 Halaman ini digunakan ketika pengguna lupa dengan kata sandinya. Pengguna harus memasukkan email yang terdaftar dan kata sandi baru. Halaman ini sudah menggunakan `StatefulWidget` dan `Form` dengan `GlobalKey` untuk validasi input, memastikan email dan password diisi sesuai format yang benar sebelum proses reset dijalankan.
 
-!Tampilan Halaman Lupa Password
+![Forgot Password](assets/praktikum/fotgot%20password.png)
 
 ### 4. Halaman Menu Makanan (`menu_makanan.dart`)
 
 Setelah pengguna berhasil login, mereka akan diarahkan ke halaman ini. Halaman ini menampilkan daftar menu makanan beserta harganya. Pengguna dapat menambah atau mengurangi jumlah pesanan untuk setiap item dan melihat totalnya. Terdapat juga tombol untuk menyelesaikan transaksi atau mereset semua pesanan.
 
-!Tampilan Halaman Menu Makanan
+![Menu Makanan](assets/praktikum/menu%20makanan.png)
 
 ## Struktur Kode
 

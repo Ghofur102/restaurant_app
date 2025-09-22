@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:restaurant_app/data/pesanan.dart';
 import 'package:restaurant_app/widgets/list_menu.dart';
 
-void main() {
+  void main() {
   runApp(const MenuMakanan());
 }
 
