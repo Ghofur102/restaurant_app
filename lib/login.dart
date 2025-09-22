@@ -64,7 +64,9 @@ class LoginPage extends StatelessWidget {
                   children: [
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/menu-makanan');
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.blue,
                           padding: const EdgeInsets.symmetric(vertical: 12),
@@ -78,7 +80,9 @@ class LoginPage extends StatelessWidget {
                     const SizedBox(width: 10),
                     Expanded(
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, '/register');
+                        },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.lightBlueAccent,
                           padding: const EdgeInsets.symmetric(vertical: 12),
@@ -97,11 +101,17 @@ class LoginPage extends StatelessWidget {
                 // Lost Password
                 Align(
                   alignment: Alignment.centerRight,
-                  child: Text(
-                    "Lost Password ?",
-                    style: TextStyle(
-                      color: Colors.black87,
-                      fontWeight: FontWeight.w500,
+                  child: GestureDetector(
+                    onTap: () {
+                      // 🚀 Arahkan ke halaman lupa password
+                      Navigator.pushNamed(context, '/lupa-password');
+                    },
+                    child: const Text(
+                      "Lost Password ?",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),

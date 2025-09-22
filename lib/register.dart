@@ -98,7 +98,7 @@ class RegisterPage extends StatelessWidget {
                 height: 48,
                 child: ElevatedButton(
                   onPressed: () {
-                    // nanti isi fungsi register
+                      Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF0088FF), // biru
@@ -125,7 +125,7 @@ class RegisterPage extends StatelessWidget {
                   const Text("Already have an account ? "),
                   GestureDetector(
                     onTap: () {
-                      // nanti arahkan ke Sign In page
+                      Navigator.pop(context);
                     },
                     child: const Text(
                       "Sign In",

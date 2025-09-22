@@ -11,11 +11,7 @@ class MenuMakanan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Menu Makanan',
-      debugShowCheckedModeBanner: false,
-      home: MenuMakananPage(),
-    );
+    return const MenuMakananPage();
   }
 }
 
@@ -93,9 +89,8 @@ class _MenuMakananPageState extends State<MenuMakananPage> {
             return ListMenu(
                 item: item,
                 onIncrement: () => _incrementalPesanan(index),
-                onDecrement: () => _decrementPesanan(index)
-            );
-          },        
+                onDecrement: () => _decrementPesanan(index));
+          },
         ),
       ),
       bottomNavigationBar: Container(
@@ -107,7 +102,7 @@ class _MenuMakananPageState extends State<MenuMakananPage> {
             Expanded(
               child: ElevatedButton(
                 onPressed: () {
-                  
+                  Navigator.pushNamed(context, '/transaksi-berhasil');
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.blue,
